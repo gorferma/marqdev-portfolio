@@ -115,10 +115,9 @@ a:hover { text-decoration: underline; }
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; 
   background: linear-gradient(to right, rgba(11,95,255,0), rgba(11,95,255,0.6), rgba(11,95,255,0));
 }
-.section h2::after {
-  content: ""; position: absolute; left: 0; right: auto; bottom: 0; width: 84px; height: 4px; border-radius: 2px; background: var(--brand-gradient);
-}
-@media (max-width: 640px) { .section h2::after { left: 50%; transform: translateX(-50%); } }
+/* Remove thick accent bar */
+.section h2::after { content: none !important; }
+@media (max-width: 640px) { .section h2::after { content: none !important; } }
 
 /* Trust strip under hero */
 .trust { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.25rem; }
