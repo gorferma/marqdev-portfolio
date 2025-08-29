@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MarqDev — Portfolio showcasing fast, interactive websites and maps." />
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="MarqDev | Portfolio" />
+  <meta property="og:description" content="Fast, interactive websites and maps by MarqDev." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/japan.png" />
+  <meta name="theme-color" content="#0b5fff" />
+  <title>MarqDev | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#portfolio">Skip to content</a>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">MarqDev</a>
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner reveal">
+        <h1>Hi, I’m Marcus — I build <span class="accent">fast, interactive</span> websites and maps.</h1>
+        <p class="subhead">Clean builds. Smooth interactions. Clear results.</p>
+        <a class="btn cta" href="#portfolio">View My Work</a>
+        <div class="trust" aria-label="Tools I use">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Leaflet</span>
+          <span class="chip">GitHub Pages</span>
+        </div>
+      </div>
+      <svg class="hero-bg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="#E9F3FF" d="M0,224L48,218.7C96,213,192,203,288,176C384,149,480,107,576,96C672,85,768,107,864,133.3C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      </svg>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2 class="reveal">Featured Work</h2>
+        <div class="grid">
+          <!-- Project: Interactive Emoji Map of Japan -->
+          <article class="card project reveal">
+            <div class="thumb-wrap">
+              <img src="assets/japan.png" alt="Screenshot of Interactive Emoji Map of Japan" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>interactive emoji map of japan</h3>
+              <p>This map contains the most important tourist destinations in Japan. Click on an emoji to obtain a short description and google search link.</p>
+              <div class="chips">
+                <span class="chip">Web</span>
+                <span class="chip">Map</span>
+                <span class="chip">1 day build</span>
+              </div>
+              <div class="card-actions">
+                <a class="btn" href="https://gorferma.github.io/japan-emoji-karte/" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Placeholder Project CTA -->
+          <article class="card project placeholder reveal">
+            <div class="thumb-wrap placeholder-thumb" aria-hidden="true">your project could be here</div>
+            <div class="card-body">
+              <h3>your project could be here</h3>
+              <p>Short description of your project goes here.</p>
+              <div class="card-actions">
+                <button class="btn btn-disabled" disabled>Live Demo</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section alt">
+      <div class="container reveal">
+        <h2>Contact</h2>
+        <p>Have a project in mind? Let’s talk.</p>
+        <form id="contact-form" action="https://formsubmit.co/marcusgorfer@gmail.com" method="POST">
+          <!-- Anti-spam honeypot (bots will fill this; humans won't) -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;">
+          <!-- Options -->
+          <input type="hidden" name="_subject" value="New inquiry from MarqDev portfolio">
+          <input type="hidden" name="_template" value="table">
+          <!-- Set to false to avoid captcha friction; remove this line to enable captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+          <p class="form-hint">Your message will be sent directly to my email. No data is stored on this site.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 MarqDev | Built fast with AI</p>
+      <nav class="social" aria-label="Social links">
+        <a href="https://www.fiverr.com/marqdev" target="_blank" rel="noopener">Fiverr</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
