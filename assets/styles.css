@@ -135,12 +135,14 @@ a:hover { text-decoration: underline; }
   grid-template-columns: repeat(12, 1fr); 
   gap: 1.25rem; 
 }
-.project { grid-column: span 4; }
-.project:nth-child(1) { grid-column: span 8; }
+/* Make all cards equal width (2-up on desktop) */
+.project { grid-column: span 6; }
+/* Remove special larger first card sizing */
+/* .project:nth-child(1) { grid-column: span 8; } -- removed */
 
 @media (max-width: 1000px) {
+  /* Keep two-up until tablet breakpoint; no special first card */
   .project { grid-column: span 6; }
-  .project:nth-child(1) { grid-column: span 12; }
 }
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
